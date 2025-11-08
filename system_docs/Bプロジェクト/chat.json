@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Sato",
+    "Time": "2025/11/08 09:00:00",
+    "message": "顧客登録APIで500エラーが返ってきます。昨日までは正常でした。"
+  },
+  {
+    "name": "Tanaka",
+    "Time": "2025/11/08 09:01:30",
+    "message": "ログには何か出ていますか？`/var/log/app.log`を確認してみてください。"
+  },
+  {
+    "name": "Sato",
+    "Time": "2025/11/08 09:02:50",
+    "message": "エラー内容は`psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint`です。"
+  },
+  {
+    "name": "Tanaka",
+    "Time": "2025/11/08 09:04:00",
+    "message": "顧客IDが重複している可能性がありますね。`customer_id`をUUIDに変える修正を最近入れたはずですが、マイグレーション済みですか？"
+  },
+  {
+    "name": "Sato",
+    "Time": "2025/11/08 09:05:15",
+    "message": "あ、まだローカルDBでマイグレーションしてませんでした。"
+  },
+  {
+    "name": "Tanaka",
+    "Time": "2025/11/08 09:06:30",
+    "message": "`alembic upgrade head`を実行してスキーマを最新にすれば直ると思います。"
+  },
+  {
+    "name": "Sato",
+    "Time": "2025/11/08 09:08:00",
+    "message": "治りました！ありがとうございます。"
+  }
+]
